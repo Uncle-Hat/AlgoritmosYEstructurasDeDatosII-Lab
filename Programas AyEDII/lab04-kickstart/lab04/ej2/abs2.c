@@ -14,9 +14,6 @@ int main(void) {
     // --- No se deben declarar variables nuevas ---
     a = -10;
     absolute(a,&res); //Tuve el error acá, al buscar la ubicación de memoria de res convertimos la variable en un puntero
-    //
-    // Completar aquí
-    //
     printf("%d\n",res);
     assert(res >= 0 && (res == a || res == -a));
     return EXIT_SUCCESS;

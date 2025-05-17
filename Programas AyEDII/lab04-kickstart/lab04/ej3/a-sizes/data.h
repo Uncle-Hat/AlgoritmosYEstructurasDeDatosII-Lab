@@ -17,9 +17,13 @@ typedef struct _s_data {
 /* 
 1_a.
 
-.1 Completar el archivo sizes.c para que muestre el tamaño en bytes de cada miembro de la estructura data_t por separado y el tamaño total que ocupa la estructura en memoria. 
+.1 Completar el archivo sizes.c para que muestre el tamaño en bytes de cada miembro de la estructura data_t por separado y el tamaño total que ocupa la estructura en memoria.
+
 ¿La suma de los miembros coincide con el total?
+No, tiene dos bytes más
+
 ¿El tamaño del campo name depende del nombre que contiene? 
+No, ya que (si no me equivoco) es la memoria en la que almacena el tipo string
 
 .2 De manera similar a lo hecho para mostrar los tamaños de cada campo de la estructura, agregar un mensaje que muestre la dirección de memoria de cada campo. Se recomienda usar los dos tipos de visualizaciones explicadas anteriormente (direcciones e índices). Analizar la salida y responder: 
 ¿Hay algo raro en las direcciones de memoria?

@@ -20,9 +20,17 @@ int main(void) {
     printf("name-size  : %lu bytes\n"
            "age-size   : %lu bytes\n"
            "height-size: %lu bytes\n"
-           "data_t-size: %lu bytes\n",sizeof(messi.name),sizeof(messi.age),sizeof(messi.age),sizeof(data_t));
+           "data_t-size: %lu bytes\n",sizeof(messi.name),sizeof(messi.age),sizeof(messi.age),sizeof(messi));
 
-        
+    printf("Memory Directions\n"
+            "name-size  : %p \n"
+           "age-size   : %p \n"
+           "height-size: %p \n"
+           "data_t-size: %p \n",
+           (void *)&messi.name
+           ,(void *)&messi.age
+           ,(void *)&messi.height
+           ,(void *)&messi);
     /*
      *
      * COMPLETAR
@@ -31,3 +39,7 @@ int main(void) {
 
     return EXIT_SUCCESS;
 }
+//*p accede al valor de la variable p del tipo int*       
+//&m accede a la dirección de memoria donde se almacenó el valor m
+//¿La suma de los miembros coincide con el total?
+//¿El tamaño del campo name depende del nombre que contiene?

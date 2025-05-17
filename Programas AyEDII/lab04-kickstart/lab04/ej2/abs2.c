@@ -19,3 +19,5 @@ int main(void) {
     return EXIT_SUCCESS;
 }
 
+//la variable *y en el Teórico Práctico sería de tipo inout, ya que entra, es modificada y sale
+//C tiene parametros in e inout, cuando hablamos de out unicamente deberíamos hablar mas de declaraciones de funcion que de parametros

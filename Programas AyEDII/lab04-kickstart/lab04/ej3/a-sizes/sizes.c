@@ -12,14 +12,20 @@ void print_data(data_t d) {
 }
 
 
-int main(void) {
+int main(void) { 
 
+    // int *infomessi = alloc(sizeof(data_t));
+    // infomessi.name = strcpy(infomessi.name,"Leo Messi");
+    // infomessi.age = 36;
+    // infomessi.height = 169;
     data_t messi = {"Leo Messi", 36, 169};
-    print_data(messi);
+    print_data(infomessi);
+    
     //%lu - long unsinged int
+
     printf("name-size  : %lu bytes\n"
            "age-size   : %lu bytes\n"
-           "height-size: %lu bytes\n"
+           "h1eiñght-size: %lu bytes\n"
            "data_t-size: %lu bytes\n",sizeof(messi.name),sizeof(messi.age),sizeof(messi.age),sizeof(messi));
 
     printf("Memory Directions\n"
@@ -31,15 +37,14 @@ int main(void) {
            ,(void *)&messi.age
            ,(void *)&messi.height
            ,(void *)&messi);
-    /*
-     *
-     * COMPLETAR
-     *
-     */
+    
+    free(byteallocator);
 
     return EXIT_SUCCESS;
 }
 //*p accede al valor de la variable p del tipo int*       
 //&m accede a la dirección de memoria donde se almacenó el valor m
 //¿La suma de los miembros coincide con el total?
+//No
 //¿El tamaño del campo name depende del nombre que contiene?
+//Tampoco

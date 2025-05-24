@@ -44,7 +44,7 @@ char *parse_filepath(int argc, char *argv[]) {
 
 int main(int argc, char *argv[]) {
     char *filepath = NULL;
-
+    
     /* parse the filepath given in command line arguments */
     filepath = parse_filepath(argc, argv);
     
@@ -58,7 +58,7 @@ int main(int argc, char *argv[]) {
     // 
     // COMPLETAR: Liberar la memoria usada por <array>
     //
-
+    free(array);
     return EXIT_SUCCESS;
 }
 

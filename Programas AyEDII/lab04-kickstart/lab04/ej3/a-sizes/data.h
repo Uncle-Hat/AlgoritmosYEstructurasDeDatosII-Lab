@@ -33,4 +33,4 @@ Ayuda: Ver recursos sobre padding de estructuras al principio del documento.
 
 .3 Por último, modificar sizes.c para que la estructura data_t se guarde en la memoria dinámica. Usar malloc y free para reservar y liberar la memoria.
 Para guardar el campo name, se puede usar la función strcpy de string.h.
-*/
+*/  

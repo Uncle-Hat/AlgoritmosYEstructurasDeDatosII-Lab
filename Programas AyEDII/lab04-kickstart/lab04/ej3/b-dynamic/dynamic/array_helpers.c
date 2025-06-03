@@ -42,7 +42,7 @@ int * array_from_file(const char *filepath, size_t *length) {
         exit(EXIT_FAILURE);
     }
 
-    *length = res;
+    *length = size;
     int *array = NULL;
     
     /*
@@ -76,4 +76,3 @@ int * array_from_file(const char *filepath, size_t *length) {
     fclose(file);
     return array;
 }
-

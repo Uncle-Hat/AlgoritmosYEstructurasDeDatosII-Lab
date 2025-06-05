@@ -53,11 +53,8 @@ void show_list(List xs) {
     printf("]\n");
 }
 
-void tail(List *l){
-    List p = *l;
+void tail(List l){
     *l = *l->next;
-    free(p);
-    p = NULL;
     }
 
 // a_node := my_list

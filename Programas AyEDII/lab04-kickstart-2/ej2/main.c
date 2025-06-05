@@ -18,19 +18,30 @@ List setup_example() {
     int i = N;
     List my_list;
     List a_node;
-    my_list = malloc(sizeof(List));
-    a_node = my_list;
+    a_node = malloc(sizeof(Node)); //Primer elemento de la lista
+    my_list = a_node;
     i = i-1;
     while(i>0){
-        a_node->data = i*10;
-        a_node = malloc(sizeof(Node));
-        a_node = a_node->next;
+        my_list->data = i*10;
+        my_list->next = malloc(sizeof(Node));
+        my_list = my_list->next;
         i = i-1;
     }
-    // a_node->data = 0;
-    // a_node->next = NULL;
-    // a_node = NULL;
+    my_list->data = 0;
+    my_list->next = NULL;
     return  a_node;
+}
+
+void append(List l){
+    List lst = malloc(sizeof(List));
+    //¿Por qué funciona?
+    lst->data = 88;
+    lst->next = NULL;
+    while(l->next!=NULL){
+        l = l->next;
+        //En este while debería estarse sobre escribiendo el valor de la list, no entiendo como funciona esto
+    }
+    l->next = lst;
 }
 
 void show_list(List xs) {
@@ -42,6 +53,18 @@ void show_list(List xs) {
     printf("]\n");
 }
 
+void tail(List *l){
+    List p = *l;
+    *l = *l->next;
+    free(p);
+    p = NULL;
+    }
+
+// a_node := my_list
+// my_list := my_list->next
+// free(a_node)
+// a_node := null
+
 int main(void) {
     List my_list;
 
@@ -49,5 +72,12 @@ int main(void) {
 
     show_list(my_list);
 
+    append(my_list);
+
+    show_list(my_list);
+
+    tail(my_list);
+    
+    show_list(my_list);
     return 0;
 }

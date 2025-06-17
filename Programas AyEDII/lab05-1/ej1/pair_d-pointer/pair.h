@@ -35,4 +35,4 @@ void pair_destroy(pair_t p);
 
 
 #endif
-
+//Como el tipo struct pair_t está ahora definidos simplemente como un puntero y no tiene referencia se rompe el programa, vamos a darle referencia en main.c

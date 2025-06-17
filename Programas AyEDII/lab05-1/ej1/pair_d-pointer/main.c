@@ -1,7 +1,7 @@
 #include <stdlib.h>  /* EXIT_SUCCESS... */
 #include <stdio.h>   /* printf()...     */
 #include "pair.h"    /* TAD Par         */
-//La diferencia se encuentra en el pair.h, ya que declara el 'entero' elem, cuyo tipo puede ser cambiado en su declaracion a como de lugar
+
 static
 void show_pair(pair_t p) {
     printf("(%d, %d)\n", pair_first(p), pair_second(p));

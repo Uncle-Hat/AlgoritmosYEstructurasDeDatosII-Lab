@@ -4,6 +4,8 @@
 typedef struct s_pair_t * pair_t;
 typedef int elem;
 
+//Está declarado como elem de tipo entero, pero; si se le asignase otro tipo trabajaría con lo que se le de
+
 pair_t pair_new(elem x, elem y);
 /*
  * DESC: Creates a new pair with components (x, y)
